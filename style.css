@@ -370,6 +370,14 @@ body {
   border-radius: 30px;
   border: 1px solid #00000050;
 }
+.result .over {
+  color: #0d448d;
+  text-shadow: 0px 0px 10px #ffffffda;
+}
+.result .clear {
+  color: #ff788a;
+  text-shadow: 2px 2px 0px #fffb00;
+}
 
 #life {
   position: absolute;

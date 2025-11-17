@@ -105,7 +105,7 @@ play.addEventListener("click", (e) => {
   } else if (userNum == computerNum) {
     play.disabled = true;
     user.disabled = true;
-    result.innerHTML = `<h2>game clear!</h2>
+    result.innerHTML = `<h2 class="clear">game clear!</h2>
           <p>축하합니다!<br>
             정답은 <span>${computerNum}</span>입니다.<br />게임을 더 즐기고
             싶으시다면 플레이 버튼을 클릭해주세요!
@@ -118,7 +118,7 @@ play.addEventListener("click", (e) => {
   if (count == 0) {
     play.disabled = true;
     user.disabled = true;
-    result.innerHTML = `<h2>game over!</h2>
+    result.innerHTML = `<h2 class="over">game over...</h2>
           <p>
             정답은 <span>${computerNum}</span>입니다.<br />게임을 더 즐기고
             싶으시다면 플레이 버튼을 클릭해주세요!
