@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="status">
+        <div class="stat_imgBox">
+          <img class="bun_bg" src="img/char-start-bg.png" />
+          <img class="bunny" src="img/char-start.png" alt="" /><img
+            class="bun_1"
+            src="img/char-start-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="game">
+        <div class="game1">
+          <div class="how">
+            how to play<i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div class="how_modal">
+            <div class="modalBox">
+              <i class="fa-solid fa-xmark"></i>
+              <h2>게임 방법</h2>
+              <ol>
+                <li>
+                  게임 시작 버튼을 클릭하면 1 이상 100 이하의 수가 무작위로 하나
+                  정해집니다. up & down 정보만으로 5번의 기회 안에 숫자를 정확히
+                  맞춰야 합니다.
+                </li>
+                <li>
+                  빈칸에 예상되는 숫자를 기입한 뒤 엔터키를 누르거나 입력 버튼을
+                  클릭하면, 정답 숫자와 비교했을 때 높은 숫자인지 낮은
+                  숫자인지의 여부를 텍스트로 알려드립니다.
+                </li>
+                <li>
+                  숫자를 기입할 수 있는 횟수는 예상한 숫자가 정답 숫자와 다를
+                  때마다 차감됩니다. 기회를 전부 쓰면 그와 동시에 게임 오버가
+                  되므로 신중하게 기입해주세요!
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="gameSlide">
+            <h1>GUESS the NUMBER!</h1>
+            <p>
+              기회는 총 5번,<br />
+              그 안에 제시된 1 이상 100 이하의 숫자를 잡아라!
+            </p>
+            <button id="start">game start</button>
+          </div>
+        </div>
+        <div class="game2">
+          <div id="life">남은 기회: 5회</div>
+          <ul id="updown">
+            <li>1 이상 100 이하의 숫자인 것 같다!</li>
+          </ul>
+          <form>
+            <input id="user" placeholder="숫자를 입력하세요" />
+            <div>
+              <button id="play">입력</button>
+              <button id="reset" onclick="replay()">재시작</button>
+            </div>
+          </form>
+        </div>
+        <div class="result"></div>
+      </div>
+    </div>
+    <script src="custom.js"></script>
+  </body>
+</html>
