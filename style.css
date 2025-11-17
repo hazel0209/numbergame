@@ -275,13 +275,16 @@ body {
   margin: 20px auto 0px;
   font-weight: bold;
   letter-spacing: -2px;
+  box-shadow: 2px 2px 4px #664242a1;
   cursor: pointer;
   transition: 0.2s;
 }
 .game1 .gameSlide #start:hover {
   /* background-color: #ccc; */
   border: 2px solid #ff4811;
-  box-shadow: inset 0px 2px 5px #c0c0c0;
+  background-color: #ffa500;
+  color: #fff;
+  box-shadow: inset 0px 2px 5px #664242a1;
   font-size: 2.3vw;
 }
 
