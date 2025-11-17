@@ -27,7 +27,18 @@ function random() {
 random();
 
 //-----게임 방법 모달창 시작-----
+//게임방법 표시
+info.addEventListener("click", () => {
+  modal.classList.add("on");
+  modalBox.classList.add("on");
+  // modalBox.style.transform = "translate(50%, -50%) scale(1)";
+  // modalBox.style.opacity = "1";
+});
 
+close.addEventListener("click", () => {
+  modal.classList.remove("on");
+  modalBox.classList.remove("on");
+});
 //-----게임 방법 모달창 끝-----
 
 //게임 시작
@@ -137,29 +148,4 @@ play.addEventListener("click", (e) => {
   console.log(history);
 
   user.value = ""; //입력 후 input 초기화
-});
-
-//...???
-// let gameConfirm = confirm(
-//   "재시작하면 정답과 입력한 모든 숫자가 함께 초기화됩니다. 정말로 재시작하시겠습니까?"
-// );
-// reset.addEventListener("click", () => {
-//   if (gameConfirm) {
-//     replay();
-//   } else {
-//     return false;
-//   }
-// });
-
-//게임방법 표시
-info.addEventListener("click", () => {
-  modal.classList.add("on");
-  modalBox.classList.add("on");
-  // modalBox.style.transform = "translate(50%, -50%) scale(1)";
-  // modalBox.style.opacity = "1";
-});
-
-close.addEventListener("click", () => {
-  modal.classList.remove("on");
-  modalBox.classList.remove("on");
 });
