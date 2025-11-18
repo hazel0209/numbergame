@@ -40,6 +40,16 @@ close.addEventListener("click", () => {
 });
 
 //-----게임 방법 모달창 끝-----
+function resizer() {
+  window.addEventListener("resize", () => {
+    let gameBottom =
+      document.querySelector(".game2").offsetTop +
+      document.querySelector(".game2").offsetHeight;
+
+    // console.log(gameBottom);
+    window.scrollTo({ top: gameBottom });
+  });
+}
 
 //게임 시작
 start.addEventListener("click", () => {
@@ -47,15 +57,7 @@ start.addEventListener("click", () => {
   // console.log(gamePoint);
 
   window.scrollTo({ top: gamePoint, behavior: "smooth" });
-});
-
-window.addEventListener("resize", () => {
-  let gameBottom =
-    document.querySelector(".game2").offsetTop +
-    document.querySelector(".game2").offsetHeight;
-
-  console.log(gameBottom);
-  window.scrollTo({ top: gameBottom });
+  resizer();
 });
 
 //게임 초기화 후 재시작
