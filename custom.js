@@ -27,18 +27,18 @@ function random() {
 random();
 
 //-----게임 방법 모달창 시작-----
+
 //게임방법 표시
 info.addEventListener("click", () => {
   modal.classList.add("on");
   modalBox.classList.add("on");
-  // modalBox.style.transform = "translate(50%, -50%) scale(1)";
-  // modalBox.style.opacity = "1";
 });
 
 close.addEventListener("click", () => {
   modal.classList.remove("on");
   modalBox.classList.remove("on");
 });
+
 //-----게임 방법 모달창 끝-----
 
 //게임 시작
@@ -47,6 +47,15 @@ start.addEventListener("click", () => {
   // console.log(gamePoint);
 
   window.scrollTo({ top: gamePoint, behavior: "smooth" });
+});
+
+window.addEventListener("resize", () => {
+  let gameBottom =
+    document.querySelector(".game2").offsetTop +
+    document.querySelector(".game2").offsetHeight;
+
+  console.log(gameBottom);
+  window.scrollTo({ top: gameBottom });
 });
 
 //게임 초기화 후 재시작

@@ -299,7 +299,7 @@ body {
   background-image: linear-gradient(180deg, #ffc6c6, #fff1c3, #c4e4ff);
   text-align: center;
   align-content: center;
-  position: relative;
+  position: sticky;
 }
 .game2 form {
   width: 50%;
